@@ -1,0 +1,10 @@
+.class:hover{
+  color: red;
+  font-size: 30px;
+}
+.new{
+  width:15px;
+  height:15px;
+  background-color:red;
+  transition: width 2s, height 4s;
+}

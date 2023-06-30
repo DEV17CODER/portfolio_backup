@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devraj Parmar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #081b29;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      background-color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00abf0;
+      font-size: 1.1rem;
+    }
+
+    hr {
+      border: 0;
+      background: #00abf0;
+      height: 1.5px;
+      margin: 40px 80px;
+    }
+
+    .leftnav {
+      position: relative;
+      font-size: 1.7rem;
+      color: #ededed;
+      font-weight: 600;
+    }
+    .leftnav::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight  1s ease forwards;
+      animation-delay: 0.4s;
+    }
+    #menu{
+      font-size: 2rem;
+      color: #ededed;
+      display: none;
+    }
+
+    .firstsec {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 90px 0;
+      /* background: url('bg.jpg') no-repeat;
+      background-size: cover;
+      background-position: center; */
+    }
+
+    .firstsec div {
+      width: 40%;
+    }
+
+    .leftdiv {
+      font-size: 3rem;
+    }
+
+    .leftdiv .buttons {
+      padding: 50px 0;
+    }
+
+    .buttons a {
+      display: inline-flex;
+      position: relative;
+      padding: 12px;
+      background: transparent;
+      color: #00abf0;
+      border: 2px solid #00abf0;
+      border-radius: 6px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    
+    .buttons a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    .buttons a:hover::before {
+      width: 100%;
+    }
+
+    .buttons a:hover {
+      color: #081b29;
+    }
+
+    .rightdiv img {
+      width: 90%;
+      margin: 50px 0;
+      /* position: absolute; */
+      background: transparent;
+      transition: 0.5s;
+    }
+    .rightdiv img:hover {
+      background: #081b29;
+      opacity: 0.5;
+    }
+
+    .textblue {
+      color: #00abf0;
+    }
+
+    #element {
+      color: #00abf0;
+      /* display: inline-block; */
+    }
+
+    .secondsec {
+      max-width: 80vw;
+      margin: auto;
+      height: 80vh;
+    }
+
+    .secondsec h1 {
+      font-size: 2rem;
+    }
+
+    .secondsec .box {
+      background: white;
+      width: 80vw;
+      height: 2px;
+      margin: 56px 0;
+      display: flex;
+    }
+
+    .secondsec .vertical {
+      height: 93px;
+      width: 1px;
+      background: white;
+      margin: 0 6vw;
+    }
+
+    .image1 {
+      width: 23px;
+      position: relative;
+      top: -32px;
+      left: -9px;
+    }
+
+    .vertical-title {
+      position: relative;
+      top: 75px;
+      width: 150px;
+      font-size: 20px;
+    }
+
+    .vertical-desc {
+      position: relative;
+      top: 86px;
+      color: gray;
+      width: 150px;
+      font-size: 15px;
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 23px 122px;
+    }
+
+    .foot a {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #00abf0;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      color: #00abf0;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .foot a:hover {
+      color: #081b29;
+    }
+
+    .foot a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    .foot a:hover::before {
+      width: 100%;
+    }
+
+    footer .footrights {
+      text-align: center;
+      color: gray;
+      padding: 12px 0;
+    }
+
+    @media screen and (max-width: 1535px) {
+      /* body {
+        min-width: fit-content;
+      }
+
+      .firstsec {
+        flex-direction: column-reverse;
+      } */
+
+      .box {
+        flex-direction: column;
+      }
+
+      .secondsec .vertical {
+        height: unset;
+      }
+
+      .vertical-title,
+      .vertical-desc {
+        left: 45px;
+      }
+
+      .secondsec .box {
+        width: 50vw;
+      }
+
+      /* nav {
+        flex-direction: column;
+      } */
+
+      .leftdiv {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rightdiv {
+        width: 321px !important;
+        display: flex;
+        justify-content: center;
+      }
+
+      .rightdiv img {
+        width: 45vw;
+        margin-bottom: 73px;
+        animation: floatImage 4s ease-in-out infinite;
+      }
+      @keyframes floatImage {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-2.4rem);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .secondsec {
+        /* max-width: 80vw;
+        margin: auto; */
+        height: 191vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .leftdiv .buttons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (max-width: 406px) {
+      .rightdiv {
+        /* width: 311px !important; */
+      }
+
+      .leftdiv {
+        font-size: 3rem !important;
+      }
+
+      .image1 {
+        top: 122px;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      html {
+        font-size: 55%;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      header {
+        padding: 2rem 3%;
+      }
+      section {
+        /* padding: 10rem 3% 2rem; */
+      }
+      .foot {
+        padding: 2rem 3%;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      #menu {
+        display: block;
+        cursor: pointer;
+      }
+      .rightnav {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #081b29;
+        border-top: 0.1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        display: none;
+      }
+      .rightnav a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+      }
+      .rightnav.active {
+        display: block;
+      }
+      .firstsec {
+        flex-direction: column;
+      }
+      .leftdiv {
+        font-size: 3rem;
+      }
+      .rightdiv img {
+        width: 70vw;
+        margin-top: 4rem;
+      }
+    }
+    @keyframes showRight {
+      100% {
+        width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="leftnav">Dev</div>
+      <i class='bx bx-menu' id="menu"></i>
+      <div class="rightnav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="firstsec">
+      <div class="leftdiv">
+        Hey, I am <span class="textblue">Devraj Parmar</span>
+        and I am a passionate<br>
+        <span id="element"></span>
+        <div class="buttons">
+          <a href="https://1drv.ms/w/s!Ai3HdJsR-4RfpFtChae3If1-up32" target="_blank">Resume</a>
+        </div>
+      </div>
+      <div class="rightdiv">
+        <img src="bg.jpg" alt="">
+      </div>
+    </section>
+    <hr>
+    <section class="secondsec">
+      <span class="textgray">What I have done so far</span>
+      <h1>Work experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">B.Tech in CS</div>
+          <div class="vertical-desc">CSPIT, CHRUSAT UNIVERSITY <br>
+            Started my journey with cs in best uni. and gain quality knowledge.
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image1" src="bg.jpg">
+          <div class="vertical-title">Full-Stack Developer</div>
+          <div class="vertical-desc">ACMEGRADE PVT.LTD. <br>
+            Made a project for an e-commerce site and experienced a full-stack development scheme. 
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">Research in ML</div>
+          <div class="vertical-desc">CHARUSAT UNIVERSITY <br>
+            Analyze diffrent research paper on human object interaction and create a report(survey) which is best model with accuracy. 
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">Developer</div>
+          <div class="vertical-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque
+            corrupti nihil reiciendis nostrum delectus, culpa ad quod quaerat, est, eaque at. Fugiat.</div>
+        </div>
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">Developer</div>
+          <div class="vertical-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque
+            corrupti nihil reiciendis nostrum delectus, culpa ad quod quaerat, est, eaque at. Fugiat.</div>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </main>
+  <footer>
+    <div class="foot">
+      <a href="https://www.linkedin.com/in/dev-parmar-32932b233/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/DEV17CODER" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href=""><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.instagram.com/__dev__17_/" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100008611501343" target="_blank"><i class='bx bxl-facebook'></i></a>
+    </div>
+    <div class="footrights">
+      Copyright &copy; 2023 Devraj's Portfolio | All rights reserved
+    </div>
+  </footer>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Data Scientist', 'Data Analyst', 'Python developer', 'AI developer'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true
+    });
+  </script>
+</body>
+</html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devraj Parmar</title>
+  <link rel="shortcut icon" type="png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -64,6 +65,7 @@
       color: #ededed;
       font-weight: 600;
     }
+
     .leftnav::before {
       content: '';
       position: absolute;
@@ -72,10 +74,11 @@
       width: 100%;
       height: 100%;
       background: #081b29;
-      animation: showRight  1s ease forwards;
+      animation: showRight 1s ease forwards;
       animation-delay: 0.4s;
     }
-    #menu{
+
+    #menu {
       font-size: 2rem;
       color: #ededed;
       display: none;
@@ -85,7 +88,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin: 90px 0;
+      margin: 120px 30px;
       /* background: url('bg.jpg') no-repeat;
       background-size: cover;
       background-position: center; */
@@ -117,7 +120,7 @@
       overflow: hidden;
       text-decoration: none;
     }
-    
+
     .buttons a::before {
       content: '';
       position: absolute;
@@ -139,12 +142,13 @@
     }
 
     .rightdiv img {
-      width: 90%;
-      margin: 50px 0;
+      width: 100%;
+      margin: 40px 0;
       /* position: absolute; */
       background: transparent;
       transition: 0.5s;
     }
+
     .rightdiv img:hover {
       background: #081b29;
       opacity: 0.5;
@@ -161,7 +165,7 @@
 
     .secondsec {
       max-width: 80vw;
-      margin: auto;
+      margin-left: 10rem;
       height: 80vh;
     }
 
@@ -275,43 +279,46 @@
 
       .vertical-title,
       .vertical-desc {
-        left: 45px;
+        left: 35px;
       }
 
       .secondsec .box {
-        width: 50vw;
+        width: 60vw;
       }
 
       /* nav {
         flex-direction: column;
       } */
+      .firstsec div {
+        width: 100%;
+      }
 
       .leftdiv {
         width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        font-size: 2.5rem;
       }
 
       .rightdiv {
-        width: 321px !important;
+        /* width: 221px !important; */
         display: flex;
         justify-content: center;
       }
 
       .rightdiv img {
-        width: 45vw;
-        margin-bottom: 73px;
+        width: 35vw;
+        /* margin-bottom: 73px; */
         animation: floatImage 4s ease-in-out infinite;
       }
+
       @keyframes floatImage {
         0% {
           transform: translateY(0);
         }
+
         50% {
           transform: translateY(-2.4rem);
         }
+
         100% {
           transform: translateY(0);
         }
@@ -320,15 +327,15 @@
       .secondsec {
         /* max-width: 80vw;
         margin: auto; */
-        height: 191vh;
+        /* height: 121vh; */
+        margin-bottom: 120px !important;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
       }
 
-      .leftdiv .buttons {
-        display: flex;
-        justify-content: center;
+      .vertical {
+        margin-left: 0.01rem !important;
       }
     }
 
@@ -345,13 +352,16 @@
         top: 122px;
       }
     }
+
     @media screen and (max-width: 1200px) {
       html {
         font-size: 55%;
       }
     }
+
     @media screen and (max-width: 991px) {
-/*       header {
+
+      /*       header {
         padding: 2rem 3%;
       }
       section {
@@ -361,11 +371,13 @@
         padding: 2rem 3%;
       }
     }
+
     @media screen and (max-width: 768px) {
       #menu {
         display: block;
         cursor: pointer;
       }
+
       .rightnav {
         position: absolute;
         top: 10%;
@@ -373,29 +385,49 @@
         width: 100%;
         padding: 1rem 3%;
         background: #081b29;
-        border-top: 0.1rem solid rgba(0,0,0,0.2);
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         display: none;
       }
+
       .rightnav a {
         display: block;
         font-size: 1.5rem;
         margin: 3rem 0;
       }
+
       .rightnav.active {
         display: block;
       }
+
       .firstsec {
         flex-direction: column;
       }
+
       .leftdiv {
         font-size: 3rem;
       }
+
       .rightdiv img {
         width: 70vw;
         margin-top: 4rem;
       }
+
+      .secondsec .box {
+        margin-left: 0.1rem;
+      }
+
+      .leftdiv .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .vertical-desc {
+        width: 60vw;
+      }
     }
+
     @keyframes showRight {
       100% {
         width: 0;
@@ -449,14 +481,15 @@
           <img class="image1" src="bg.jpg">
           <div class="vertical-title">Full-Stack Developer</div>
           <div class="vertical-desc">ACMEGRADE PVT.LTD. <br>
-            Made a project for an e-commerce site and experienced a full-stack development scheme. 
+            Made a project for an e-commerce site and experienced a full-stack development scheme.
           </div>
         </div>
         <div class="vertical">
           <img class="image1" src="">
           <div class="vertical-title">Research in ML</div>
           <div class="vertical-desc">CHARUSAT UNIVERSITY <br>
-            Analyze diffrent research paper on human object interaction and create a report(survey) which is best model with accuracy. 
+            Analyze diffrent research paper on human object interaction and create a report(survey) which is best model
+            with accuracy.
           </div>
         </div>
       </div>
@@ -469,7 +502,8 @@
       <a href="https://github.com/DEV17CODER" target="_blank"><i class='bx bxl-github'></i></a>
       <a href=""><i class='bx bxl-twitter'></i></a>
       <a href="https://www.instagram.com/__dev__17_/" target="_blank"><i class='bx bxl-instagram'></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100008611501343" target="_blank"><i class='bx bxl-facebook'></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100008611501343" target="_blank"><i
+          class='bx bxl-facebook'></i></a>
     </div>
     <div class="footrights">
       Copyright &copy; 2023 Devraj's Portfolio | All rights reserved
@@ -488,4 +522,5 @@
     });
   </script>
 </body>
+
 </html>
